@@ -26,8 +26,8 @@ const Home = () => {
         </FoodCircle>
       </AcaiContainer>
       <ShushiContainer>
-        <FoodCircle to="/" isSushi={true}>
-          <p>Shushi</p>
+        <FoodCircle to="/sushi" isSushi={true}>
+          <p>Sushi</p>
         </FoodCircle>
       </ShushiContainer>
       <Footer>

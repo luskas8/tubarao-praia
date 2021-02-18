@@ -28,7 +28,7 @@ export const Container = styled.div<IContainer>`
 `;
 
 export const TextBlock = styled.div`
-  color: ${Colos["white-scate-1"]};
+  color: ${Colos["white-scale-1"]};
   & > h1 {
     text-align: center;
   }
@@ -36,7 +36,7 @@ export const TextBlock = styled.div`
     border-radius: 12px 12px 0 0;
     text-align: center;
     padding: 12px;
-    background: ${Colos["white-scate-2"]};
+    background: ${Colos["white-scale-2"]};
   }
 `;
 
@@ -92,8 +92,6 @@ export const FoodCircle = styled(Link)<IFoodCircle>`
   height: 280px;
   font: 400 4.8rem "sans-serif";
 
-  text-decoration: none;
-
   border-radius: 50%;
   margin: ${(props) =>
     props.isSushi ? "0 0 0 calc(100% - 85%)" : "0 calc(100% - 85%) 0 0"};
@@ -102,10 +100,10 @@ export const FoodCircle = styled(Link)<IFoodCircle>`
   justify-content: ${(props) => (props.isSushi ? "flex-end" : "flex-start")};
   align-items: center;
   background: ${(props) =>
-    props.isSushi ? Colos["red-scale-2"] : Colos["purple-scate-2"]};
+    props.isSushi ? Colos["red-scale-2"] : Colos["purple-scale-2"]};
 
   & > p {
-    color: ${Colos["white-scate-1"]};
+    color: ${Colos["white-scale-1"]};
     margin: ${(props) => (props.isSushi ? "0 -50px 0 0" : "0 0 0 -25px")};
   }
 
