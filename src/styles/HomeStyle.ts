@@ -60,6 +60,7 @@ export const Footer = styled.footer`
 export const AcaiContainer = styled.div<IBackground>`
   width: 50%;
   height: 100vh;
+  position: relative;
 
   background: url('${(props) => (props.imageUri)}') no-repeat center right;
   background-size: cover;
@@ -67,6 +68,15 @@ export const AcaiContainer = styled.div<IBackground>`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  overflow: hidden;
+  
+  & > img {
+    z-index: 0;
+    position: absolute;
+    bottom: -150px;
+    left: -320px;
+    width: 120%;
+  }
 
   @media only screen and (max-width: 799.99px) {
     width: 100%;
@@ -77,6 +87,7 @@ export const AcaiContainer = styled.div<IBackground>`
 export const ShushiContainer = styled.div`
   width: 50%;
   height: 100vh;
+  z-index: 4;
 
   display: flex;
   justify-content: flex-start;
@@ -92,10 +103,11 @@ export const FoodCircle = styled(Link)<IFoodCircle>`
   width: 280px;
   height: 280px;
   font: 400 4.8rem "sans-serif";
+  z-index: 4;
 
   border-radius: 50%;
   margin: ${(props) =>
-    props.isSushi ? "0 0 0 calc(100% - 85%)" : "0 calc(100% - 85%) 0 0"};
+    props.isSushi ? "0 0 calc(100% - 70%) calc(100% - 85%)" : "0 calc(100% - 85%) calc(100% - 70%) 0"};
 
   display: flex;
   justify-content: ${(props) => (props.isSushi ? "flex-end" : "flex-start")};
