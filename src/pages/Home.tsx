@@ -10,7 +10,7 @@ import {
   TextBlock,
 } from "../styles/HomeStyle";
 
-import fundoShushiImg from "../images/Group 1.svg";
+import fundoShushiImg from "../images/homepage_bg.svg";
 
 const Home = () => {
   return (
@@ -21,12 +21,12 @@ const Home = () => {
         </TextBlock>
       </Header>
       <AcaiContainer>
-        <FoodCircle isSushi={false}>
+        <FoodCircle to="/" isSushi={false}>
           <p>Açaí</p>
         </FoodCircle>
       </AcaiContainer>
       <ShushiContainer>
-        <FoodCircle isSushi={true}>
+        <FoodCircle to="/" isSushi={true}>
           <p>Shushi</p>
         </FoodCircle>
       </ShushiContainer>

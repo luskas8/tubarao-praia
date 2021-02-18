@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+
 import { Colos } from "./Colos";
 
 interface IFoodCircle {
@@ -60,7 +62,6 @@ export const Footer = styled.footer`
 export const AcaiContainer = styled.div`
   width: 50%;
   height: 100vh;
-  // background: ${Colos["purple-scate-1"]};
 
   display: flex;
   justify-content: flex-end;
@@ -75,7 +76,6 @@ export const AcaiContainer = styled.div`
 export const ShushiContainer = styled.div`
   width: 50%;
   height: 100vh;
-  // background: ${Colos["red-scale-1"]};
 
   display: flex;
   justify-content: flex-start;
@@ -87,10 +87,12 @@ export const ShushiContainer = styled.div`
   }
 `;
 
-export const FoodCircle = styled.span<IFoodCircle>`
+export const FoodCircle = styled(Link)<IFoodCircle>`
   width: 280px;
   height: 280px;
   font: 400 4.8rem "sans-serif";
+
+  text-decoration: none;
 
   border-radius: 50%;
   margin: ${(props) =>
