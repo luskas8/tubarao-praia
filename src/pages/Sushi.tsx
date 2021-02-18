@@ -10,10 +10,13 @@ import {
   SuchiContainer,
   ImageBlock,
   SushiMenu,
-} from "../styles/Sushi";
+} from "../styles/SushiStyle";
 
+import logoTubarao from "../images/logo-tubarao-da-praia-2.png";
 import comboOne from "../images/combo1.png";
 import comboTwo from "../images/combo2.png";
+import comboThree from "../images/combo3.png";
+import comboFour from "../images/combo4.png";
 
 const Sushi = () => {
   return (
@@ -21,7 +24,7 @@ const Sushi = () => {
       <Header>
         <div>
           <LogoBlock>
-            <img src={comboOne} alt="Logo japa" />
+            <img src={logoTubarao} alt="Logo tubarão japa" />
           </LogoBlock>
 
           <MenuBar />
@@ -41,8 +44,11 @@ const Sushi = () => {
 
         <SushiMenu>
           <h1>Conheça nosso Menu!</h1>
-
-          <SushiMenuItem />
+          <div>
+            <SushiMenuItem imagemUri={comboOne} name="Combo 1" />
+            <SushiMenuItem imagemUri={comboFour} name="Combo 4" />
+            <SushiMenuItem imagemUri={comboThree} name="Combo 3" />
+          </div>
         </SushiMenu>
       </Main>
     </SuchiContainer>

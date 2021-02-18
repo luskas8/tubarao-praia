@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Colos } from "../styles/Colos";
 
+interface IMenuBarProps {
+  praiaStyle?: boolean;
+}
+
 const Menu = styled.div`
   width: 100%;
   display: flex;
@@ -10,7 +14,7 @@ const Menu = styled.div`
   align-items: center;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled.div<IMenuBarProps>`
   padding: 15px;
   position: relative;
 
@@ -19,7 +23,7 @@ const MenuItem = styled.div`
     height: 0px;
     border-radius: 12px;
     content: '';
-    background: ${Colos["white-scale-1"]};
+    background: ${(props) => (props.praiaStyle ? Colos["green-scale-1"] : Colos["white-scale-1"])};
     position: absolute;
     left: 5px;
     rigth: 5px;
@@ -38,21 +42,21 @@ const MenuItem = styled.div`
   }
 `;
 
-const MenuBar = () => {
+const MenuBar = ({praiaStyle = false}: IMenuBarProps) => {
   return (
     <Menu>
-      <MenuItem>
+      <MenuItem praiaStyle={praiaStyle} >
         <Link to="/">Fazer Pedido</Link>
       </MenuItem>
-      <MenuItem>
+      <MenuItem praiaStyle={praiaStyle} >
         <Link to="/">Contato</Link>
-      </MenuItem>
-      <MenuItem>
+      </MenuItem >
+      <MenuItem praiaStyle={praiaStyle} >
         <Link to="/">Localização</Link>
-      </MenuItem>
-      <MenuItem>
+      </MenuItem >
+      <MenuItem praiaStyle={praiaStyle} >
         <Link to="/">Mais</Link>
-      </MenuItem>
+      </MenuItem >
     </Menu>
   );
 };

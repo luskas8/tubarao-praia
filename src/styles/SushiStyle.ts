@@ -21,8 +21,9 @@ export const Header = styled.header`
 `;
 
 export const LogoBlock = styled.div`
-  width: 320px;
-  heigth: 320px;
+  width: 220px;
+  heigth: 220px;
+  padding: 0 0 25px 0;
 
   & > img {
     width: 100%;
@@ -67,8 +68,15 @@ export const SushiMenu = styled.div`
   padding: 80px 20px 0 20px;
 
   & > h1 {
-    font: 300 1.4rem 'sans-serif';
+    font: 300 2.4rem 'sans-serif';
     color: ${Colos["white-scale-3"]};
     text-align: center;
+  }
+
+  & > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+
+    margin-top: 80px;
   }
 `;

@@ -8,4 +8,5 @@ export const Colos = {
   "purple-scale-2": "#351744",
   "red-scale-1": "#D14B37",
   "red-scale-2": "#DC3232",
+  "green-scale-1": "#466E1C",
 }
