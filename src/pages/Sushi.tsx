@@ -1,7 +1,7 @@
 import React from "react";
 
 import { MenuBar } from "../components/MenuBar";
-import { SushiItem } from "../components/SushiItem";
+import { SushiMenuItem } from "../components/SushiMenuItem";
 import {
   Header,
   LogoBlock,
@@ -42,7 +42,7 @@ const Sushi = () => {
         <SushiMenu>
           <h1>Conheça nosso Menu!</h1>
 
-          <SushiItem />
+          <SushiMenuItem />
         </SushiMenu>
       </Main>
     </SuchiContainer>

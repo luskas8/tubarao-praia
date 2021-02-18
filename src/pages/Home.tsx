@@ -10,17 +10,19 @@ import {
   TextBlock,
 } from "../styles/HomeStyle";
 
-import fundoShushiImg from "../images/homepage_bg.svg";
+import bgAcaiImg from "../images/Retângulo Arredondado 1.png";
+import acaiImg from '../images/group_acai.svg';
 
 const Home = () => {
   return (
-    <Container imageUri={fundoShushiImg}>
+    <Container>
       <Header>
         <TextBlock>
           <h1>Qual é a sua fome?</h1>
         </TextBlock>
       </Header>
-      <AcaiContainer>
+      <AcaiContainer imageUri={bgAcaiImg}>
+        <img src={acaiImg} alt="Acai foto ilustrativa"/>
         <FoodCircle to="/" isSushi={false}>
           <p>Açaí</p>
         </FoodCircle>

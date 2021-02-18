@@ -7,20 +7,18 @@ interface IFoodCircle {
   isSushi: boolean;
 }
 
-interface IContainer {
+interface IBackground {
   imageUri: string;
 }
 
-export const Container = styled.div<IContainer>`
+export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
 
+  background: ${Colos["red-scale-1"]};
+
   display: flex;
   position: relative;
-
-  background: url('${(props) => (props.imageUri)}') no-repeat center center;
-  background-size: cover;
-
 
   @media only screen and (max-width: 799.99px) {
     flex-direction: column;
@@ -59,9 +57,12 @@ export const Footer = styled.footer`
   align-items: center;
 `;
 
-export const AcaiContainer = styled.div`
+export const AcaiContainer = styled.div<IBackground>`
   width: 50%;
   height: 100vh;
+
+  background: url('${(props) => (props.imageUri)}') no-repeat center right;
+  background-size: cover;
 
   display: flex;
   justify-content: flex-end;
