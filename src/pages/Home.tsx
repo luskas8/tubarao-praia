@@ -23,7 +23,7 @@ const Home = () => {
       </Header>
       <AcaiContainer imageUri={bgAcaiImg}>
         <img src={acaiImg} alt="Acai foto ilustrativa"/>
-        <FoodCircle to="/" isSushi={false}>
+        <FoodCircle to="/acai" isSushi={false}>
           <p>Açaí</p>
         </FoodCircle>
       </AcaiContainer>

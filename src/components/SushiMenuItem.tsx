@@ -26,6 +26,7 @@ const ItemContainer = styled.div`
   }
 
   & > span {
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;

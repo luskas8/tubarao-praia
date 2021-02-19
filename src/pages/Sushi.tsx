@@ -45,9 +45,9 @@ const Sushi = () => {
         <SushiMenu>
           <h1>Conheça nosso Menu!</h1>
           <div>
-            <SushiMenuItem imagemUri={comboOne} name="Combo 1" />
-            <SushiMenuItem imagemUri={comboFour} name="Combo 4" />
-            <SushiMenuItem imagemUri={comboThree} name="Combo 3" />
+            <SushiMenuItem imagemUri={comboOne} name="Combo 12 peças" />
+            <SushiMenuItem imagemUri={comboFour} name="Combo Multi" />
+            <SushiMenuItem imagemUri={comboThree} name="Combo Vegan" />
           </div>
         </SushiMenu>
       </Main>
