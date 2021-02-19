@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { MenuBar } from "../components/MenuBar";
 import {
@@ -13,12 +13,22 @@ import {
 import logoTubarao from "../images/logo-tubarao-praia.png";
 import melhorBarca from "../images/melhor-acai.png";
 import barcaImg from "../images/barca.png";
+import { ToggleMenu } from "../styles/SushiStyle";
 
 const Acai = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <AcaiContainer>
-      <Header>
-        <div>
+      <Header isOpen={isMenuOpen}>
+        <ToggleMenu
+          isOpen={isMenuOpen}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <div className="line line1"></div>
+          <div className="line line2"></div>
+          <div className="line line3"></div>
+        </ToggleMenu>
+        <div className="header-wrapper">
           <LogoBlock>
             <img src={logoTubarao} alt="Logo tubarão praia" />
           </LogoBlock>

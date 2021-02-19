@@ -48,6 +48,7 @@ const MenuItem = styled.div<IMenuBarProps>`
   & > a {
     color: ${Colos["white-scale-1"]};
     font: 700 1.6rem 'sans-serif';
+    text-align: center;
   }
 `;
 
