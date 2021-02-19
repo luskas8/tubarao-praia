@@ -35,10 +35,10 @@ export const TextBlock = styled.div`
   }
   
   & > h1 {
-    margin-top: 100px;
+    margin-top: 30px;
     width: 490px;
     text-align: center;
-    font: 300 4.4rem 'Fjalla One','sans-serif';
+    font: 300 5.4rem 'Fjalla One','sans-serif';
   }
   & > h3 {
     border-radius: 12px 12px 0 0;
