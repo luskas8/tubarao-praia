@@ -11,6 +11,8 @@ export const Colos = {
 
   "red-scale-1": "#D14B37",
   "red-scale-2": "#DC3232",
-  
+
   "green-scale-1": "#466E1C",
+
+  "yellow-scale-1": "#E8CC0E",
 }

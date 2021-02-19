@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colos } from "./Colos";
+import { Colos } from "./Colors";
 
 import texturaSushi from '../images/textura_sushi.png';
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { Colos } from "./Colos";
+import { Colos } from "./Colors";
 
 interface IFoodCircle {
   isSushi: boolean;
