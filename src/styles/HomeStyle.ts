@@ -12,16 +12,16 @@ interface IBackground {
 }
 
 export const Container = styled.div`
+  scroll-behavior: smooth;
   width: 100%;
   min-height: 100vh;
 
   background: ${Colos["red-scale-1"]};
 
-  display: flex;
   position: relative;
+  display: flex;
 
-  @media only screen and (max-width: 799.99px) {
-    background: transparent;
+  @media only screen and (max-width: 1600.99px) {
     flex-direction: column;
   }
 `;
@@ -47,63 +47,149 @@ export const Header = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 1600.99px) {
+    height: 100vh;
+    position: relative;
+
+    & > .svg {
+      position: absolute;
+      bottom: 0;
+      color: ${Colos["white-scale-1"]};
+    }
+  }
 `;
 
 export const Footer = styled.footer`
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 1600.99px) {
+    display: none;
+  }
+`;
+
+export const Section = styled.section`
+  display: flex;
+  max-height: 100vh;
+  position: relative;
+
+  @media only screen and (max-width: 1600.99px) {
+  }
 `;
 
 export const AcaiContainer = styled.div<IBackground>`
   width: 50%;
   height: 100vh;
-  position: relative;
-
-  background: url('${(props) => (props.imageUri)}') no-repeat center right;
+  background: url("${(props) => props.imageUri}") no-repeat center right;
   background-size: cover;
+  position: absolute;
+  left: 0;
 
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  overflow: hidden;
-  
-  & > img {
-    z-index: 0;
-    position: absolute;
-    bottom: -150px;
-    left: -320px;
-    width: 120%;
+  & > div {
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+
+    & > img {
+      width: 100%;
+      position: absolute;
+      left: -25%;
+      bottom: -15%;
+    }
   }
 
-  @media only screen and (max-width: 799.99px) {
+  & > div > a:last-child {
+    color: #fff;
+    position: absolute;
+    right: 0%;
+    display: none;
+    transform: rotate(-90deg);
+  }
+
+  @media only screen and (max-width: 1600.99px) {
     width: 100%;
-    justify-content: center;
-    background: transparent;
+    background: ${Colos["purple-scale-1"]};
+
+    & > div {
+      justify-content: center;
+
+      & > img {
+        width: 70%;
+        left: -20%;
+        bottom: -15%;
+      }
+    }
+
+    & > div > a:last-child {
+      display: inherit;
+    }
+  }
+
+  @media only screen and (max-width: 800.99px) {
+    & > div {
+      & > img {
+        width: 100%;
+        left: -25%;
+        bottom: -10%;
+      }
+    }
   }
 `;
 
 export const ShushiContainer = styled.div`
   width: 50%;
   height: 100vh;
-  z-index: 4;
+  background: ${Colos["red-scale-1"]};
+  background-size: cover;
+  position: absolute;
+  left: 50%;
 
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  & > div {
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
 
-  & > img {
-    z-index: 0;
-    position: absolute;
+    & > img {
+      width: 100%;
+      position: absolute;
+      right: -4.5%;
+      bottom: 0%;
+    }
   }
 
-  @media only screen and (max-width: 799.99px) {
+  & > div > a:last-child {
+    color: #fff;
+    position: absolute;
+    left: 0%;
+    display: none;
+    transform: rotate(90deg);
+  }
+
+  @media only screen and (max-width: 1600.99px) {
     width: 100%;
-    justify-content: center;
+    left: 100%;
+
+    & > div {
+      justify-content: center;
+    }
+
+    & > div > a:last-child {
+      display: inherit;
+    }
   }
 `;
 
@@ -115,7 +201,9 @@ export const FoodCircle = styled(Link)<IFoodCircle>`
 
   border-radius: 50%;
   margin: ${(props) =>
-    props.isSushi ? "0 0 calc(100% - 70%) calc(100% - 85%)" : "0 calc(100% - 85%) calc(100% - 70%) 0"};
+    props.isSushi
+      ? "0 0 calc(100% - 70%) calc(100% - 85%)"
+      : "0 calc(100% - 85%) calc(100% - 70%) 0"};
 
   display: flex;
   justify-content: ${(props) => (props.isSushi ? "flex-end" : "flex-start")};
@@ -128,9 +216,9 @@ export const FoodCircle = styled(Link)<IFoodCircle>`
     margin: ${(props) => (props.isSushi ? "0 -50px 0 0" : "0 0 0 -25px")};
   }
 
-  @media only screen and (max-width: 799.99px) {
+  @media only screen and (max-width: 1600.99px) {
     margin: 0;
-    justify-content: ${(props) => (props.isSushi ? "center" : "center")};
+    justify-content: center;
     align-items: center;
 
     & > p {
