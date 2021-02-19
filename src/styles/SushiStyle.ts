@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Colos } from "./Colors";
 
-import texturaSushi from '../images/textura_sushi.png';
+import texturaSushi from "../images/textura_sushi.png";
 
 interface IMenuProps {
   isOpen: boolean;
@@ -14,6 +14,8 @@ export const SuchiContainer = styled.div`
 `;
 
 export const Header = styled.header<IMenuProps>`
+  background: url("${texturaSushi}");
+
   & > .header-wrapper {
     display: flex;
     justify-content: space-around;
@@ -69,11 +71,10 @@ export const SaleContainer = styled.div`
   overflow: hidden;
 
   & > h2 {
-
   }
-  `;
-  
-  export const ImageBlock = styled.div`
+`;
+
+export const ImageBlock = styled.div`
   width: 1100px;
   position: absolute;
   top: -250px;
@@ -99,14 +100,14 @@ export const SushiMenu = styled.div`
   padding: 80px 20px 0 20px;
 
   & > h1 {
-    font: 300 2.4rem 'sans-serif';
+    font: 300 2.4rem "sans-serif";
     color: ${Colos["white-scale-3"]};
     text-align: center;
   }
 
   & > div {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 
     margin-top: 80px;
   }
@@ -120,7 +121,7 @@ export const SushiMenu = styled.div`
 `;
 
 export const ToggleMenu = styled.div<IMenuProps>`
-  background-color: #FFF;
+  background-color: #fff;
   position: fixed;
   top: 20px;
   right: 20px;

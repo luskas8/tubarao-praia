@@ -14,7 +14,7 @@ export const AcaiContainer = styled.div`
 `;
 
 export const Header = styled.header<IMenu>`
-  height: 250px;
+  height: 150px;
   background: url("${texturaAcai}");
 
   & > .header-wrapper {
@@ -62,7 +62,7 @@ export const LogoBlock = styled.div`
 `;
 
 export const Main = styled.div`
-  min-height: calc(100vh - 250px);
+  min-height: calc(100vh - 150px);
   background: url("${texturaAcaiMain}");
   background-size: 360px 260px;
 
