@@ -52,7 +52,7 @@ const Acai = () => {
             Adicione o pedido e depois escolha a forma de pagamento e a forma de
             entrega
           </h2>
-          <RiArrowDownSLine size={35} />
+          <RiArrowDownSLine size={35} />  
         </Footer>
       </Main>
     </AcaiContainer>

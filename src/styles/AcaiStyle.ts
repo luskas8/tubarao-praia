@@ -14,7 +14,7 @@ export const AcaiContainer = styled.div`
 `;
 
 export const Header = styled.header<IMenu>`
-  height: 150px;
+  height: 250px;
   background: url("${texturaAcai}");
 
   & > .header-wrapper {
@@ -62,7 +62,7 @@ export const LogoBlock = styled.div`
 `;
 
 export const Main = styled.div`
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - 250px);
   background: url("${texturaAcaiMain}");
   background-size: 360px 260px;
 
@@ -100,12 +100,18 @@ export const SalasContainer = styled.div`
     }
 
     & > div:first-child {
-      width: calc(100% - 500px);
+      width: 400px;
     }
 
     & > div:last-child {
       margin-top: 50px;
       width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 600.99px) {
+    & > div:first-child {
+      width: 200px;
     }
   }
 `;
@@ -114,6 +120,10 @@ export const Footer = styled.footer`
   text-align: center;
   margin: 25px 0 0 0;
   color: ${Colos["white-scale-1"]};
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 
   & > h1 {
     font: 300 2.4rem "sans-serif";

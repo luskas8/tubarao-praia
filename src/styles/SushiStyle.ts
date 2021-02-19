@@ -8,13 +8,12 @@ interface IMenuProps {
 }
 
 export const SuchiContainer = styled.div`
+  background: url("${texturaSushi}");
   width: 100%;
   min-height: 100vh;
 `;
 
 export const Header = styled.header<IMenuProps>`
-  background: url("${texturaSushi}");
-
   & > .header-wrapper {
     display: flex;
     justify-content: space-around;
@@ -107,7 +106,7 @@ export const SushiMenu = styled.div`
 
   & > div {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
 
     margin-top: 80px;
   }
