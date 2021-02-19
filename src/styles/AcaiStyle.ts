@@ -88,7 +88,7 @@ export const SalasContainer = styled.div`
   }
 
   & > div:last-child {
-    width: 1200px;
+    width: 1000px;
   }
 
   @media only screen and (max-width: 1184.99px) {
