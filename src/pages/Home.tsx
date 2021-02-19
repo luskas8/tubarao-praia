@@ -20,7 +20,7 @@ const Home = () => {
     <Container>
       <Header>
         <TextBlock>
-          <h1>Qual é a sua fome?</h1>
+          <h1>Qual é a sua FOME ?</h1>
         </TextBlock>
         <a href="#food-section" className="svg">
           <RiArrowDownSLine size={85} />

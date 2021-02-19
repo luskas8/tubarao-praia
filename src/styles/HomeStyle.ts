@@ -29,14 +29,31 @@ export const Container = styled.div`
 export const TextBlock = styled.div`
   z-index: 4;
   color: ${Colos["white-scale-1"]};
+
+  &:first-child {
+    
+  }
+  
   & > h1 {
+    margin-top: 100px;
+    width: 490px;
     text-align: center;
+    font: 300 6.4rem 'Fjalla One','sans-serif';
   }
   & > h3 {
     border-radius: 12px 12px 0 0;
     text-align: center;
+    font: 300 2.2rem 'sans-serif';
     padding: 12px;
     background: ${Colos["white-scale-2"]};
+  }
+
+  @media only screen and (max-width: 1600.99px) {
+    & > h1 {
+      margin-top: 0;
+      width: 350px;
+      font-size: 3.4rem;
+    }
   }
 `;
 
