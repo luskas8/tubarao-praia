@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { MenuBar } from "../components/MenuBar";
 import { SushiMenuItem } from "../components/SushiMenuItem";
@@ -10,6 +10,7 @@ import {
   SuchiContainer,
   ImageBlock,
   SushiMenu,
+  ToggleMenu,
 } from "../styles/SushiStyle";
 
 import logoTubarao from "../images/logo-tubarao-da-praia-2.png";
@@ -19,15 +20,24 @@ import comboThree from "../images/combo3.png";
 import comboFour from "../images/combo4.png";
 
 const Sushi = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <SuchiContainer>
-      <Header>
-        <div>
+      <Header isOpen={isMenuOpen}>
+        <ToggleMenu
+          isOpen={isMenuOpen}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <div className="line line1"></div>
+          <div className="line line2"></div>
+          <div className="line line3"></div>
+        </ToggleMenu>
+        <div className="header-wrapper">
           <LogoBlock>
             <img src={logoTubarao} alt="Logo tubarão japa" />
           </LogoBlock>
 
-          <MenuBar />
+          <MenuBar isOpen={isMenuOpen} />
         </div>
       </Header>
 

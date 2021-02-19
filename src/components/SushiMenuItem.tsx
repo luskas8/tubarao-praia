@@ -8,8 +8,8 @@ interface IMenuItemProps {
 
 const ItemContainer = styled.div`
   cursor: pointer;
-  width: auto;
-  heigth: 300px;
+  width: 100%;
+  heigth: auto;
   position: relative;
 
   display: flex;

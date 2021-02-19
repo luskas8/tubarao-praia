@@ -5,14 +5,23 @@ import { Colos } from "../styles/Colors";
 
 interface IMenuBarProps {
   praiaStyle?: boolean;
+  isOpen?: boolean;
 }
 
-const Menu = styled.div`
+interface IMenu {
+  isOpen?: boolean;
+}
+
+const Menu = styled.div<IMenu>`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
+
+  @media only screen and (max-width: 800.99px) {
+    flex-direction: column;
+  }
+  `;
 
 const MenuItem = styled.div<IMenuBarProps>`
   padding: 15px;
@@ -42,9 +51,9 @@ const MenuItem = styled.div<IMenuBarProps>`
   }
 `;
 
-const MenuBar = ({praiaStyle = false}: IMenuBarProps) => {
+const MenuBar = ({praiaStyle = false, isOpen: isMenuOpen}: IMenuBarProps) => {
   return (
-    <Menu>
+    <Menu isOpen={isMenuOpen}>
       <MenuItem praiaStyle={praiaStyle} >
         <Link to="/">Fazer Pedido</Link>
       </MenuItem>

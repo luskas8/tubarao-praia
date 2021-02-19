@@ -21,11 +21,13 @@ export const Container = styled.div`
   position: relative;
 
   @media only screen and (max-width: 799.99px) {
+    background: transparent;
     flex-direction: column;
   }
 `;
 
 export const TextBlock = styled.div`
+  z-index: 4;
   color: ${Colos["white-scale-1"]};
   & > h1 {
     text-align: center;
@@ -81,6 +83,7 @@ export const AcaiContainer = styled.div<IBackground>`
   @media only screen and (max-width: 799.99px) {
     width: 100%;
     justify-content: center;
+    background: transparent;
   }
 `;
 
@@ -92,6 +95,11 @@ export const ShushiContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  & > img {
+    z-index: 0;
+    position: absolute;
+  }
 
   @media only screen and (max-width: 799.99px) {
     width: 100%;
