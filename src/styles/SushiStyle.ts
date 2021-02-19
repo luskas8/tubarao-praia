@@ -71,6 +71,19 @@ export const SaleContainer = styled.div`
   overflow: hidden;
 
   & > h2 {
+    margin-top: 125px;
+    font: 400 4.6rem 'Give You Glory', cursive;
+    font-weight: bold;
+    width: 50px;
+    transform: rotate(-35deg);
+
+    & > span {
+      color: ${Colos["red-scale-2"]};
+    }
+  }
+
+  @media only screen and (max-width: 800.99px) {
+    & > h2 { margin-top: 0; }
   }
 `;
 
